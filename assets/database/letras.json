@@ -1,0 +1,47 @@
+[
+    {
+        "title": "a",
+        "img":"assets/images/check.png",
+        "questions": [
+            "b",
+            "a",
+            "e",
+            "c"
+
+        ],
+        "respueta": "a"
+    },
+    {
+        "title": "b",
+        "img":"assets/images/check.png",
+        "questions": [
+            "b",
+            "a",
+            "h",
+            "c"
+        ],
+        "respueta": "b"
+    },
+    {
+        "title": "c",
+        "img":"assets/images/check.png",
+        "questions": [
+            "a",
+            "k",
+            "a",
+            "c"
+        ],
+        "respueta": "c"
+    },
+    {
+        "title": "d",
+        "img":"assets/images/check.png",
+        "questions": [
+            "d",
+            "a",
+            "e",
+            "c"
+        ],
+        "respueta": "d"
+    }
+]
