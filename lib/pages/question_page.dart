@@ -20,12 +20,12 @@ class QuestionPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 80, right: 80),
               child: LinearProgressIndicator(
-                value: .25,
+                value: .50,
                 backgroundColor: Colors.grey,
               ),
             ),
             Text('Question'),
-            Image.asset('assets/images/mano1.jpg'),
+            Image.asset('assets/images/manod.jpg'),
             Container(
                 padding: EdgeInsets.all(16), child: AswerCard(respuesta: true)),
             Container(

@@ -38,7 +38,9 @@ class CrearBody extends StatelessWidget {
                 ),
               );
             },
-            child: QuestionCard(),
+            child: QuestionCard(
+              img: true,
+            ),
           ),
         ),
         Container(
@@ -53,7 +55,7 @@ class CrearBody extends StatelessWidget {
                 ),
               );
             },
-            child: QuestionCard(),
+            child: QuestionCard(img: false),
           ),
         ),
         Container(
@@ -68,7 +70,9 @@ class CrearBody extends StatelessWidget {
                 ),
               );
             },
-            child: QuestionCard(),
+            child: QuestionCard(
+              img: false,
+            ),
           ),
         ),
         Container(
@@ -83,7 +87,9 @@ class CrearBody extends StatelessWidget {
                 ),
               );
             },
-            child: QuestionCard(),
+            child: QuestionCard(
+              img: false,
+            ),
           ),
         ),
       ],
