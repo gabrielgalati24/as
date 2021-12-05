@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class PreguntaProvider extends ChangeNotifier {
+class PruebaProvider extends ChangeNotifier {
   int count = 0;
 
   // int get ccount => PreguntaProvider()._internal(count);
 // impelentacion  factory
-  factory PreguntaProvider() => _getInstance();
-  static PreguntaProvider get instance => _getInstance();
-  static PreguntaProvider? _instance;
-  PreguntaProvider._internal() {
+  factory PruebaProvider() => _getInstance();
+  static PruebaProvider get instance => _getInstance();
+  static PruebaProvider? _instance;
+  PruebaProvider._internal() {
     // print('PreguntaProvider');
   }
-  static PreguntaProvider _getInstance() {
+  static PruebaProvider _getInstance() {
     if (_instance == null) {
-      _instance = new PreguntaProvider._internal();
+      _instance = new PruebaProvider._internal();
     }
     return _instance!;
   }

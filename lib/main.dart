@@ -14,36 +14,31 @@ class MyApp extends StatelessWidget {
   static const String title = 'Light & Dark Theme';
 
   @override
-  Widget build(BuildContext context) => ChangeNotifierProvider(
-        create: (context) => ThemeProvider(),
-        builder: (context, _) {
-          final themeProvider = Provider.of<ThemeProvider>(context);
-
-          return MultiProvider(
-            providers: [
-              ChangeNotifierProvider(
-                lazy: true,
-                create: (_) {
-                  PreguntaProvider();
-                },
-              ),
-              // ChangeNotifierProvider(
-              //   create: (context) => themeProvider,
-              // ),
-            ],
-            child: MaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: title,
-              themeMode: themeProvider.themeMode,
-              theme: MyThemes.lightTheme,
-              // darkTheme: MyThemes.darkTheme,
-              initialRoute: 'home',
-              routes: {
-                'home': (_) => HomaPage(),
-                'question': (_) => QuestionPage(),
-              },
-            ),
-          );
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          // lazy: true,
+          create: (_) {
+            PreguntaProvider();
+          },
+        ),
+        // ChangeNotifierProvider(
+        //   create: (context) => themeProvider,
+        // ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: title,
+        // themeMode: themeProvider.themeMode,
+        theme: MyThemes.lightTheme,
+        // darkTheme: MyThemes.darkTheme,
+        initialRoute: 'home',
+        routes: {
+          'home': (_) => HomaPage(),
+          'question': (_) => QuestionPage(),
         },
-      );
+      ),
+    );
+  }
 }
