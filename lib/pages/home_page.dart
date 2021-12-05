@@ -10,10 +10,10 @@ class HomaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
-      drawer: Drawer(),
-      body: CrearBody(),
+      drawer: const Drawer(),
+      body: const CrearBody(),
     );
   }
 }
@@ -26,21 +26,20 @@ class CrearBody extends StatelessWidget {
     return GridView.count(
       crossAxisCount: 2,
       children: [
-        Container(
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => QuestionPage(
-                      // producto: productos[index],
-                      ),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => QuestionPage(
+                  lienarprogres: 0,
+                  // producto: productos[index],
                 ),
-              );
-            },
-            child: QuestionCard(
-              img: true,
-            ),
+              ),
+            );
+          },
+          child: const QuestionCard(
+            img: true,
           ),
         ),
         Container(

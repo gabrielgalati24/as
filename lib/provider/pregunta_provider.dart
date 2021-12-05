@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class PreguntaProvider extends ChangeNotifier {
   int count = 0;
+  int respuesta = 1;
 
   // int get ccount => PreguntaProvider()._internal(count);
 // impelentacion  factory
@@ -12,9 +13,7 @@ class PreguntaProvider extends ChangeNotifier {
     // print('PreguntaProvider');
   }
   static PreguntaProvider _getInstance() {
-    if (_instance == null) {
-      _instance = new PreguntaProvider._internal();
-    }
+    _instance ??= PreguntaProvider._internal();
     return _instance!;
   }
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class PruebaProvider extends ChangeNotifier {
   int count = 0;
-
+  Color color = Colors.red;
   // int get ccount => PreguntaProvider()._internal(count);
 // impelentacion  factory
   factory PruebaProvider() => _getInstance();
@@ -12,14 +12,12 @@ class PruebaProvider extends ChangeNotifier {
     // print('PreguntaProvider');
   }
   static PruebaProvider _getInstance() {
-    if (_instance == null) {
-      _instance = new PruebaProvider._internal();
-    }
+    _instance ??= PruebaProvider._internal();
     return _instance!;
   }
 
   void increment() {
-    count++;
+    color = Colors.green;
     notifyListeners();
   }
   // bool? isElegible = true;

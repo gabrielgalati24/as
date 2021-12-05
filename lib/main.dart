@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/pregunta.dart';
+import 'package:flutter_application_1/pages/final_questions_page.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/question_page.dart';
 import 'package:flutter_application_1/provider/pregunta_provider.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         routes: {
           'home': (_) => HomaPage(),
           'question': (_) => QuestionPage(),
+          'result': (_) => FinalQuestionsPage(),
         },
       ),
     );
