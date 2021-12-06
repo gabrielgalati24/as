@@ -38,23 +38,9 @@ class CrearBody extends StatelessWidget {
               ),
             );
           },
-          child: const QuestionCard(
-            img: true,
-          ),
-        ),
-        Container(
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => QuestionPage(
-                      // producto: productos[index],
-                      ),
-                ),
-              );
-            },
-            child: QuestionCard(img: false),
+          child: QuestionCard(
+            img: 'assets/images/letras.jpg',
+            title: 'Letras',
           ),
         ),
         Container(
@@ -70,7 +56,8 @@ class CrearBody extends StatelessWidget {
               );
             },
             child: QuestionCard(
-              img: false,
+              img: 'assets/images/acciones.jpg',
+              title: 'Acciones',
             ),
           ),
         ),
@@ -87,7 +74,26 @@ class CrearBody extends StatelessWidget {
               );
             },
             child: QuestionCard(
-              img: false,
+              img: 'assets/images/saludos.jpg',
+              title: 'Saludos',
+            ),
+          ),
+        ),
+        Container(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => QuestionPage(
+                      // producto: productos[index],
+                      ),
+                ),
+              );
+            },
+            child: QuestionCard(
+              img: 'assets/images/familia.jpg',
+              title: 'Familia',
             ),
           ),
         ),

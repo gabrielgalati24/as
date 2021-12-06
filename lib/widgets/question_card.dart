@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
 class QuestionCard extends StatefulWidget {
-  const QuestionCard({Key? key, img}) : super(key: key);
+  String img;
+  String title;
+  QuestionCard({Key? key, required this.img, required this.title})
+      : super(key: key);
 
   @override
   State<QuestionCard> createState() => _QuestionCardState();
 }
 
 class _QuestionCardState extends State<QuestionCard> {
-  bool img = true;
+  // bool img = true;
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +22,10 @@ class _QuestionCardState extends State<QuestionCard> {
       ),
       child: Column(
         children: [
-          const Center(child: Text("Letras")),
+          Center(child: Text(widget.title)),
           Center(
-              child: img
-                  ? Image.asset('assets/images/letras.jpg')
-                  : const Text('No hay imagen')),
+              child: Image.asset(widget.img,
+                  height: 120, width: 120, fit: BoxFit.fill)),
         ],
       ),
     );

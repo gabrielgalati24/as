@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         // themeMode: themeProvider.themeMode,
         theme: MyThemes.lightTheme,
         // darkTheme: MyThemes.darkTheme,
-        initialRoute: 'home',
+        initialRoute: 'result',
         routes: {
           'home': (_) => HomaPage(),
           'question': (_) => QuestionPage(),
